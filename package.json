@@ -1,0 +1,23 @@
+{
+  "name": "node-osdb-hash",
+  "version": "0.0.1",
+  "description": "Implementation of OSDb hash in nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/disrupticons/node-osdb-hash.git"
+  },
+  "keywords": [
+    "osdb",
+    "opensubtitles",
+    "hash"
+  ],
+  "author": "Mathew Joe Thomas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/disrupticons/node-osdb-hash/issues"
+  }
+}
