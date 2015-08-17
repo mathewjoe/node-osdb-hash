@@ -19,5 +19,8 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/disrupticons/node-osdb-hash/issues"
+  },
+  "dependencies": {
+    "bignum": "~0.11.0"
   }
 }
