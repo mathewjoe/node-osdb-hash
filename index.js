@@ -39,7 +39,7 @@ module.exports = function (fpath) {
 	var hash = bignum(fsize);
 
 	// Reading the first and last 64kB into two separate buffers
-	fs.readSync(fd, startbuff, 0, hashChunkSize, null);
+	fs.readSync(fd, startbuff, 0, hashChunkSize, 0);
 	fs.readSync(fd, endbuff, 0, hashChunkSize, fsize - hashChunkSize);
 	fs.closeSync(fd);
 
