@@ -5,6 +5,7 @@ var hashChunkSize = 64 * 1024 // 64kB
 var startbuff = new Buffer(hashChunkSize);
 var endbuff = new Buffer(hashChunkSize);
 var bn64 = bignum('ffffffffffffffff', base=16);
+var hash = bignum(0);
 
 /*
 Returns the hash, given a buffer
@@ -24,7 +25,7 @@ var calculateHash = function (srcBuff) {
 	return hash;
 }
 
-module.exports = function (fpath) {
+module.exports.hashSync = function (fpath) {
 	try {
 		var fd = fs.openSync(fpath, 'r');
 	}
@@ -35,8 +36,7 @@ module.exports = function (fpath) {
 	var stats = fs.statSync(fpath);
 	var fsize = stats.size;
 
-	// Initializing hash with the size of the file
-	var hash = bignum(fsize);
+	hash = hash.add(fsize);
 
 	// Reading the first and last 64kB into two separate buffers
 	fs.readSync(fd, startbuff, 0, hashChunkSize, 0);
