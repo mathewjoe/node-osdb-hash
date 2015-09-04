@@ -21,6 +21,7 @@
     "url": "https://github.com/disrupticons/node-osdb-hash/issues"
   },
   "dependencies": {
+    "async": "^1.4.2",
     "bignum": "~0.11.0"
   }
 }
