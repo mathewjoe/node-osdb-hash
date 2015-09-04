@@ -1,6 +1,6 @@
 {
   "name": "node-osdb-hash",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Implementation of OSDb hash in nodejs",
   "main": "index.js",
   "scripts": {
